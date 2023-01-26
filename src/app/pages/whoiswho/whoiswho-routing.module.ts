@@ -1,0 +1,13 @@
+import { WhoiswhoComponent } from './whoiswho.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', component: WhoiswhoComponent}
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class WhoiswhoRoutingModule { }

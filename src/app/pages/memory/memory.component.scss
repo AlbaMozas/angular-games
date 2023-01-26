@@ -1,0 +1,57 @@
+.allPlanets{
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+
+.c-planet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin-top: 40px;
+   
+    
+}
+
+.c-planet img {
+    width: 180px;
+    margin: 10px;
+    border: 3px solid #48ffc2;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+.gameOver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    
+
+    
+}
+
+.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gOver-button{
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        list-style: none;
+        text-decoration: none;
+        border-radius: 2vh;
+        width: 200px;
+        margin-left: 30px;
+}
+
+h2{
+    font-size: 15px;
+    color: #fadf4a;
+}

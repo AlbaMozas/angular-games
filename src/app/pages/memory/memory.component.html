@@ -1,0 +1,26 @@
+
+<!-- 2 Importamos las imagenes en assets y las pintamos con los datos del array -->
+<!-- 3 creamos un div general y le añadimos los estilos en scss por defecto -->
+<div class="allPlanets">
+    <div *ngIf="successCount < (allCards.length/2)" class="c-planet">
+        <div *ngFor = "let card of allCards">
+            <!-- pintamos los planetas -->
+            <!-- ngIf porque al hacer clic se visualiza el planeta que de normal está oculto -->
+            <img *ngIf="card.selected" src="{{card.img}}" alt="">
+            <!-- <h2>{{card.name}}</h2> -->
+            <!-- para que muestre el tick -->
+            <img *ngIf="card.checked" src="assets/tick.svg" alt="">
+            <!-- pintamos el universo para ocultar los planetas -->
+            <!-- creamos una función para que al hacer clic se muestre la imagen de abajo -->
+            <img *ngIf="!card.selected && !card.checked" (click)="checkedCard(card)" src="assets/universe.svg" alt="">
+        </div> 
+    </div>
+</div>
+<div class="gameOver">
+    <div class="gameOver-loop" *ngIf="successCount === (allCards.length/2)">
+        <div class="play"><h2>¡Juego terminado!</h2></div>
+        <!-- <img src="https://cdn-icons-png.flaticon.com/512/1687/1687666.png" alt=""> -->
+        <div class="play"><button class="gOver-button" (click)="reset()">Play</button></div>
+        
+    </div>
+</div>

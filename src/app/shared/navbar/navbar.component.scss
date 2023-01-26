@@ -1,0 +1,58 @@
+.navbar{
+    background-color: #fadf4a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-games{
+        height: 250px;
+        width: 100%;
+        // background-image: url('https://p4.wallpaperbetter.com/wallpaper/623/1001/205/8-bit-arcade-cabinet-retro-games-monochrome-wallpaper-preview.jpg');
+        // background-repeat: no-repeat;
+        // background-repeat: no-repeat;
+        // background-position: right;
+        // background-size: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+
+        &_imgG{
+            width: 400px;
+        }
+
+        &_imgP{
+            width: 200px;
+        }
+
+    }
+
+    &-button{
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        list-style: none;
+        text-decoration: none;
+        border-radius: 2vh;
+        width: 200px;
+        margin-left: 30px;
+    }
+}
+
+a:link{
+    text-decoration:none;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: orange;
+}
+
+a:focus{
+    color:#fadf4a;
+}

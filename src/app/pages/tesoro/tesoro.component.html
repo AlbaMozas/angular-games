@@ -1,0 +1,26 @@
+<div class="game">
+    <div class="cgame">
+        <div class="game-score">
+            <button><p>Intentos : {{shots}}</p></button>
+        </div>
+        
+            <div *ngIf="win" class="win">
+                <p>¡Has ganado con {{shots}} intentos!</p>
+                <button class="bPlay" (click)="init()">Play</button>
+            </div>
+        
+    </div>
+  <div class="game-row">
+    <div *ngFor="let rows of gameTreasure; let i = index">
+      <div class="game-colums">
+        <div *ngFor="let cols of gameTreasure![i]; let j = index">
+          <div class="game-cells">
+            <img (click)="start(i,j)" *ngIf="!gameTreasure![i][j].clicked" src="../../../assets/x.png"/>
+            <img class="skull" src="../../../assets/skull.png" *ngIf="gameTreasure![i][j].clicked && !gameTreasure![i][j].treasure"/>
+            <img src="../../../assets/chest.png" *ngIf="gameTreasure![i][j].clicked && gameTreasure![i][j].treasure"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
