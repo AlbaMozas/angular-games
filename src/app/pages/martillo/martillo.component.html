@@ -1,1 +1,28 @@
-<p>martillo works!</p>
+<div class="allGame">
+    <div class="botones-score">
+        <div>
+            <button>
+                <h2 class="puntos">Puntos : </h2>
+                <h2 data-function="theScore">{{theScore}}</h2>
+            </button>
+        </div>
+        <div>
+            <button>
+                <!-- <h2>Tiempo:</h2> -->
+                <h2 data-function="seconds"> Tiempo:{{seconds}}</h2>
+            </button>
+        </div>
+    </div>
+    <div class="estructure">
+        <div *ngFor="let rows of gameMartillo; let i = index">
+            <div class="column">
+                <div *ngFor="let columns of gameMartillo![i]; let j = index">
+                    <div class="one">            
+                        <img (click)="golpe(i, j)" *ngIf="gameMartillo![i][j].mole" src="../../../assets/mole.png"/>
+                        <img class="imgBg" src="../../../assets/bg.jpg" *ngIf="!gameMartillo![i][j].mole"/>            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

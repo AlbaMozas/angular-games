@@ -35,7 +35,7 @@ export class TesoroComponent implements OnInit{
 
   init(){
     console.log("init");
-    this.shots=0;
+    this.shots = 0;
     this.win=false;
     this.diferentRow = Math.floor(Math.random() * this.rows);
     this.diferentColumn = Math.floor(Math.random() * this.cols);
